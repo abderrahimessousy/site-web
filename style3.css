@@ -1,0 +1,129 @@
+*{
+  margin: 0px;
+  padding: 0px;
+  box-sizing: border-box;
+  font-family: 'Poppins',sans-serif;
+  transition: all 0.35s linear;
+}
+body{
+  min-height:100vh;
+  background-image: url('image4/t.jpg');
+  background-size: cover;
+
+}
+.container{
+  min-height: 100vh;
+  display: grid;
+  grid-template-columns: 300px 1fr;
+  grid-gap:32px;
+  backdrop-filter:blur(12px) contrast(80%);
+  color:white;
+  position: absolute;
+  position:fixed;
+  }
+  
+.info{
+  padding-top: 24px;
+  padding-left: 24px;
+}
+.poster{
+  width: 480px;
+  height:100vh;
+  overflow: hidden;
+}
+.poster img{
+  width: 340px;
+  height:100vh;
+  object-fit: cover;
+  overflow: hidden;
+  transition: all 1.5s ease-in-out;
+}
+
+.poster img:hover{
+  transform: scale(1.35) rotateZ(5deg);
+}
+.info > div{
+  margin-top:32px;
+  margin-bottom: 32px;
+  margin-right: 32px;
+}
+h2{
+  background-image: linear-gradient(to right, rgb(49, 86, 248), rgb(228, 227, 225), rgba(192, 190, 185, 0.658), rgb(207, 207, 207), #00f);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+.movie-detail .set{
+  display: inline-block;
+  margin-right: 64px;
+}
+.movie-detail label {
+  font-size: 14px;
+  color: #ededed;
+  display: block;
+}
+.movie-detail span{
+  font-size: 22px;
+}
+.movie-description{
+  line-height: 24px;
+}
+.movie-cast .header{
+  font-size: 24px;
+  margin-bottom: 24px;
+}
+.movie-cast .list{
+  display: grid;
+  grid-template-columns: repeat(6,120px);
+  grid-gap:24px;
+}
+.movie-cast .cast{
+  width:120px;
+  height: 160px;
+  cursor: pointer;
+}
+.movie-cast img{
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 16px;
+  border:2px solid #cccccc;
+}
+.movie-cast .cast:hover{
+  border-width: 0px;
+  transform: scale(1.1) rotateZ(-2deg);
+  box-shadow: -4px 4px 16px #ff0000,
+  4px -4px 16px #ff0000;
+}
+.movie-cast .cast:hover{
+  margin-top: 24px;
+  color:#ff0000;
+}
+.movie-cast .header{
+  background-image: linear-gradient(to right, rgb(173, 173, 173), rgb(255, 255, 255), rgba(255, 255, 255, 0.151), rgb(214, 208, 208), #00f);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.nav .logo{
+	color:red;
+	font-weight:700;
+	font-size:2em;
+	text-decoration:none;
+    width: 80px;
+    object-fit: contain;
+}
+.nav__avatar{
+    width: 30px;
+    object-fit: contain;
+}
+.nav{
+    position: fixed;
+    top:0;
+    width: 100%;
+    display:flex;
+    justify-content: space-between;
+    padding: 20px;
+    z-index: 1;
+    transition-timing-function: ease-in;
+    transition: all 0.5s;
+}
